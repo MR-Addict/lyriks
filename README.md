@@ -1,4 +1,4 @@
-<h1>React Learning App - Movieland <img src="https://github.com/MR-Addict/lyriks/actions/workflows/pages.yml/badge.svg?branch=main"/>
+<h1>React Learning App - Lyriks <img src="https://github.com/MR-Addict/lyriks/actions/workflows/pages.yml/badge.svg?branch=main"/>
 </h1>
 
 ## 1. Preview

@@ -6,8 +6,7 @@ import { useGetSongsByCountryQuery } from '../redux/services/shazamCore';
 import { availableCountryCode, defaultCountryCode } from '../assets/constants';
 
 const CountryTracks = () => {
-  const defaultCountry = 'US';
-  const [country, setCountry] = useState(defaultCountry);
+  const [country, setCountry] = useState(defaultCountryCode);
   const [loading] = useState(true);
   const { activeSong, isPlaying } = useSelector((state) => state.player);
   const { data, isFetching, error } = useGetSongsByCountryQuery(country);
@@ -22,7 +21,7 @@ const CountryTracks = () => {
         <h2 className="font-bold text-3xl text-white text-left mt-4 mb-10">Around You</h2>
         <select
           onChange={(e) => setCountry((e.target.value))}
-          value={defaultCountryCode}
+          value={country}
           className="bg-black text-gray-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5"
         >
           {availableCountryCode.map((countryCode) => <option key={countryCode} value={countryCode}>{countryCode}</option>)}
