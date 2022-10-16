@@ -25,6 +25,8 @@ jobs:
           restore-keys: ${{ runner.OS }}-npm-cache
       - name: Install npm dependencies
         run: npm install
+      - name: Add .env
+        run: echo ${{ secrets.VITE_SHAZAM_CORE_RAPID_API_KEY }} > .env
       - name: Build project
         run: npm run build
       - name: Rename assets
